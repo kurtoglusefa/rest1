@@ -1,6 +1,7 @@
 package it.polito.wa2.rest1.services
 
 import it.polito.wa2.rest1.dtos.StudentDTO
+import it.polito.wa2.rest1.dtos.TestDTO
 import org.springframework.stereotype.Service
 
 @Service("mock")
@@ -21,5 +22,9 @@ class StudentServiceMock : StudentService {
 
     override fun getAllStudentsBySurname(surname: String): List<StudentDTO> {
         return students.filter { it.surname == surname }
+    }
+    override fun test(testDTO: TestDTO): String {
+        // Implement the logic for the test method here
+        return "Test method implementation in mock"
     }
 }

@@ -1,6 +1,7 @@
 package it.polito.wa2.rest1.services
 
 import it.polito.wa2.rest1.dtos.StudentDTO
+import it.polito.wa2.rest1.dtos.TestDTO
 import it.polito.wa2.rest1.dtos.toDTO
 import it.polito.wa2.rest1.repositories.StudentRepository
 import org.springframework.context.annotation.Primary
@@ -22,5 +23,10 @@ class StudentServiceImpl(private val studentRepository: StudentRepository): Stud
 
     override fun getAllStudentsBySurname(surname: String): List<StudentDTO> {
         return studentRepository.findAllBySurname(surname).map { it.toDTO() }
+    }
+
+    override fun test(testDTO: TestDTO): String {
+        // Implement the logic for the test method here
+        return "Test method implementation"
     }
 }

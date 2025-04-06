@@ -9,5 +9,4 @@ class Rest1ApplicationTests {
     @Test
     fun contextLoads() {
     }
-
 }
